@@ -6,6 +6,8 @@ from playlist_slider import playlist_slider
 from urllib.parse import quote
 from PIL import Image, ImageOps
 from io import BytesIO
+import st_file_uploader as stf
+import io
 
 # Shared Gemini response schemas
 SONG_SCHEMA = {
@@ -259,7 +261,7 @@ def log_duration_event(stage, songs, target_seconds, **details):
 def optimize_image(uploaded_file, max_dimension=1024, quality=85):
     """Resize and compress an image for Gemini analysis."""
 
-    image = Image.open(uploaded_file)
+    image = Image.open(io.BytesIO(uploaded_file.getvalue()))
 
     # Correct orientation using EXIF metadata
     image = ImageOps.exif_transpose(image)
@@ -294,9 +296,10 @@ st.set_page_config(
 st.title("🎵 Photo Playlist")
 st.write("Turn your favorite photographs into personalized music playlists.")
 
-uploaded_photo = st.file_uploader(
+uploaded_photo = stf.file_uploader(
     "Upload a photograph",
-    type=["jpg", "jpeg", "png", "webp"]
+    type=["jpg", "jpeg", "png", "webp"],
+    accept_multiple_files=False,
 )
 
 keywords = st.text_input(
@@ -352,7 +355,7 @@ else:
 
 if uploaded_photo:
     st.image(
-        uploaded_photo,
+        uploaded_photo.getvalue(),
         caption="Your uploaded photograph",
         width=480
     )

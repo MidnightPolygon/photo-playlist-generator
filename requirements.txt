@@ -1,3 +1,4 @@
 streamlit
 google-genai
 Pillow
+st-file-uploader
