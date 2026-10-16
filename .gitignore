@@ -1,0 +1,24 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Private API credentials
+.streamlit/secrets.toml
+.env
+.env.*
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# Additional virtual environment files
+/Include/
+/Lib/
+/Scripts/
+/pyvenv.cfg
