@@ -1,0 +1,43 @@
+
+<main class="app-container">
+  <header>
+    <h1>Photo Playlist Generator</h1>
+    <p>Turn your photographs into personalized music playlists.</p>
+  </header>
+
+  <section class="welcome">
+    <h2>Your photo. Your mood. Your music.</h2>
+    <p>
+      Upload a photograph, describe the vibe you're looking for,
+      and let AI create a playlist inspired by your moment.
+    </p>
+  </section>
+
+  <!-- Photo Uploader Section -->
+  <section class="photo-upload">
+  <h2>Choose Your Photograph</h2>
+
+  <p>
+    Select a photograph to inspire your playlist.
+  </p>
+
+  <input
+  #photoInput
+  type="file"
+  accept="image/jpeg,image/png,image/webp"
+  (change)="onPhotoSelected($event)"
+/>
+
+@if (selectedPhoto) {
+  <p>Selected file: {{ selectedFileName }}</p>
+
+  <div class="photo-preview">
+    <img [src]="photoPreviewUrl" alt="Selected photograph preview" />
+  </div>
+
+  <button type="button" (click)="removePhoto(photoInput)">
+    Remove Photograph
+  </button>
+}
+</section>
+</main>
