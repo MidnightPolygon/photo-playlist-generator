@@ -1,11 +1,11 @@
 # Photo Playlist Generator — Product Roadmap
 
-**Roadmap version:** Draft v1.2 (approved)  
+**Roadmap version:** Draft v1.3 (approved)  
 **Project:** Photo Playlist Generator  
 **Repository:** `MidnightPolygon/photo-playlist-generator`  
 **Platform:** Python, Streamlit, Google Gemini  
 **Product direction:** Photo-inspired media discovery, with Music first and Audiobooks later  
-**Initial public demo target:** October 18, 2026
+**Deployment Status:** Public prototype available on Streamlit Community Cloud
 
 > This roadmap records approved product direction and planned capabilities. Feature priorities and milestone sequencing are planning guidance, not a claim that every item is implemented.
 
@@ -160,6 +160,7 @@ Audiobooks are a **later product mode**, not a prerequisite for the initial musi
 | **CORE-003** | Shared history | Common session-history mechanics with mode-specific stored recommendations. |
 | **CORE-004** | Metadata and provider links | Reusable validation, external link handling, and provider capability boundaries. |
 | **CORE-005** | Responsive navigation | Consistent desktop/mobile navigation, including mode selection and history placement. |
+| **CORE-006** | Anonymous Usage Analytics & Retention | Tracking for unique browsers, playlist generations, returning visitors, and D1/D7/D30 retention. |
 
 ## 7. Releases, versioning, and feedback
 
@@ -178,7 +179,7 @@ Milestones are **ordered planning stages**, not fixed calendar promises.
 | Milestone | Outcome |
 |---|---|
 | **M1 — Public demo stability** | Resolve critical upload/mobile issues, protect API calls, and maintain a dependable generation flow. |
-| **M2 — Photo transparency** | Compact photo thumbnail, “What the AI Saw,” and stronger photo-influence testing. |
+| **M2 — Photo transparency & measurement** | Compact photo thumbnail, “What the AI Saw,” stronger photo-influence testing, and baseline usage/retention metrics. |
 | **M3 — Personalization** | Photo-only generation, genre multi-select with Other, discovery slider, and editable playlist title. |
 | **M4 — Playlist control** | Remove, manual Add, three-option Swap, and accurate duration updates. |
 | **M5 — Portability and trust** | CSV/text export, copy action, and track verification. |
@@ -203,6 +204,7 @@ Milestones are **ordered planning stages**, not fixed calendar promises.
 - Validate provider links and metadata before claiming availability.
 - Check failure paths: missing/invalid uploads, model errors, malformed responses, and API rate limits.
 - Collect qualitative feedback from prototype testers and prioritize observed usability issues.
+- Verify anonymous visitor persistence, event accuracy, return-visit detection, and retention reporting without collecting image or keyword content.
 
 ## 10. Explicitly deferred or conditional
 
@@ -216,6 +218,6 @@ Milestones are **ordered planning stages**, not fixed calendar promises.
 
 ## 11. Roadmap governance
 
-This document represents the **approved Draft v1.2 product direction**. New ideas should be explored and evaluated separately before being added as roadmap commitments. Implementation details belong in development work, with roadmap changes reflecting approved decisions rather than speculative features.
+This document represents the approved Draft v1.3 product direction. New ideas should be explored and evaluated separately before being added as roadmap commitments. Implementation details belong in development work, with roadmap changes reflecting approved decisions rather than speculative features.
 
 **Suggested next repository artifacts:** `CHANGELOG.md` when versioning is introduced and GitHub Releases/tags for public release history.
