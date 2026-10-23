@@ -22,3 +22,6 @@ __pycache__/
 /Lib/
 /Scripts/
 /pyvenv.cfg
+
+# Local integration test photograph
+/test_photo.jpg

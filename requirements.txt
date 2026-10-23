@@ -2,3 +2,7 @@ streamlit
 google-genai
 Pillow
 st-file-uploader
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
